@@ -1,4 +1,4 @@
-name: build manual alpine
+name: build manual
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       version:
         description: 'version to build'
         required: true
-        default: '6.2.19'
+        default: 'v0.2.41'
 
 jobs:
   build:
