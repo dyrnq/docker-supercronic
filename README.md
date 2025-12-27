@@ -10,11 +10,11 @@ cat >./crontab<<EOF
 */30 * * * * * * bash -c "curl https://ipinfo.io"
 EOF
 
-docker run --name cron -rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -help
+docker run --name cron --rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -help
 
-docker run --name cron -rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -inotify /etc/crontab
+docker run --name cron --rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -inotify /etc/crontab
 
-docker run --name cron -rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -passthrough-logs -inotify /etc/crontab
+docker run --name cron --rm -it -v ./crontab:/etc/crontab -e TZ=Asia/Shanghai dyrnq/supercronic:v0.2.41 -passthrough-logs -inotify /etc/crontab
 ```
 
 > Usage of supercronic
